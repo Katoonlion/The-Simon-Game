@@ -12,4 +12,4 @@ Run Instructions : You can either download the files and open index.html with a 
 
 </small>
 
-![Simon Game](./image/Simon-Game-Screenshot.jpg)
+![Simon Game](https://github.com/Katoonlion/The-Simon-Game/blob/main/image/Simon-Game-Screenshot.jpg)
