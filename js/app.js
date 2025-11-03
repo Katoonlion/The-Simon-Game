@@ -97,7 +97,7 @@ function flashColor(selectedColor) {
     document.querySelector(`#${selectedColor}`).classList.add("pressedColor");
     setTimeout(() => {
          document.querySelector(`#${selectedColor}`).classList.remove("pressedColor");
-    }, 300);
+    }, 100);
 };
 
 // Function check player answer
@@ -109,7 +109,7 @@ function checkPlayerAnswer(currentLevel) {
         // wait and call function start random color for start random new round
             setTimeout(() => {
                startRandom();   
-            }, 800);
+            }, 1000);
                       
         }
 
@@ -120,7 +120,7 @@ function checkPlayerAnswer(currentLevel) {
         document.querySelector('body').classList.add('game-Over');
         setTimeout(() => {
             document.querySelector('body').classList.remove('game-Over');
-        }, 500);
+        }, 200);
 
         // update title to ‘Game Over! Press for Restart’
         changeTitletoScore.textContent = 'Game Over! Press for restart';
