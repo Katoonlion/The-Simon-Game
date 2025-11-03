@@ -60,3 +60,12 @@ body {
   background-color: blue;
 }
 
+.pressedColor {
+  /*box shadow : 0 first --> move 0 in horizontal // 0 second --> move 0 in vertical 
+  // 30px --> Shadow spread radius 30px // white --> color of Shadow spread radius */
+  box-shadow: 0 0 30px white;
+}
+
+.game-Over {
+  background-color: red;
+}
