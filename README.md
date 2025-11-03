@@ -12,4 +12,4 @@ Run Instructions : You can either download the files and open index.html with a 
 
 </small>
 
-![Simon Game](https://imgur.com/a/az5IAT0)
+![Simon Game](https://i.imgur.com/ZNgCSoY.jpeg)
