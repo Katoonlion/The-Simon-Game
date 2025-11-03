@@ -11,5 +11,3 @@ For this game I add sound, a little bit animation and try to learn about new fun
 Run Instructions : You can either download the files and open index.html with a browser, or you can access this link to play the game online: https://katoonlion.github.io/The-Simon-Game/
 
 </small>
-
-![Simon Game](https://github.com/Katoonlion/The-Simon-Game/blob/main/image/Simon-Game-Screenshot.jpg)
