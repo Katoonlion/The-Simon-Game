@@ -7,4 +7,4 @@
 
 # Run Instructions : You can either download the files and open index.html with a browser, or you can access this link to play the game online: https://katoonlion.github.io/The-Simon-Game/
 
-![Game Screenshot](images/Simon-Game-Screenshot.jpg)
+![Simon-Game](./image/Simon-Game-Screenshot.jpg)
