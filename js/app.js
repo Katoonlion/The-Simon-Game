@@ -1,5 +1,5 @@
 /*-------------- Constants -------------*/
-
+const maxLevel = 5;
 /*---------- Variables (state) ---------*/
 
 // Define constants and variables
@@ -42,30 +42,41 @@ function gameStarted() {
     };
 };
 
-// Function start random color
 function startRandom() {
-    // random color from option → store to game pattern array
-    // random index of color <= 4
-    let randomIndexColor = Math.floor(Math.random()*4);
-    // If index = 0 --> randomColor = 'green'
-    let randomColor = allColors[randomIndexColor];
-    // put it in array gameRandomColor
-    gameRandomColor.push(randomColor);
+    // If level not up to max level
+    if(level < maxLevel) {
+         // random color from option → store to game pattern array
+        // random index of color <= 4
+        let randomIndexColor = Math.floor(Math.random()*4);
+        // If index = 0 --> randomColor = 'green'
+        let randomColor = allColors[randomIndexColor];
+        // put it in array gameRandomColor
+        gameRandomColor.push(randomColor);
 
-    // 	increase level
-    level ++;
+        // 	increase level
+        level ++;
 
-    // 	update title and and current level
-    changeTitletoScore.textContent = `level ${level}`;
-    // clear player pattern for next round
-    playerPatternColor = [];
+        // 	update title and and current level
+        changeTitletoScore.textContent = `level ${level}`;
+        // clear player pattern for next round
+        playerPatternColor = [];
 
-    // play sound and flash on color chosen
-    // sound at color of game random
-    playSound(randomColor);  
+        // play sound and flash on color chosen
+        // sound at color of game random --> current color
+        // playSound(randomColor);  
 
-    // fade color at color of game random
-    flashColor(randomColor);
+        // fade color at color of game random --> current color
+        // flashColor(randomColor);
+
+        // Repeat all pattern game sequence (sound & flash)
+        gameRepeatAllSequence();
+    }
+    else {
+        playSound('win');
+        changeTitletoScore.textContent = 'Congrats! You win!. Press to restar!';
+        pressStartElement.style.display = '';
+        
+    }
 
 };
 
@@ -83,9 +94,10 @@ function handlePlayerClick(event) {
 
     // call to function check player answer for check last index of player was click
     checkPlayerAnswer(playerPatternColor.length-1);
+    
 }
 
-// Function play sound when player click on each color
+// Function play sound when player click on each color 
 function playSound(name) {
     // let audio = new Audio("sounds/" + color + ".mp3");
     let audio = new Audio(`sounds/${name}.mp3`);
@@ -131,6 +143,20 @@ function checkPlayerAnswer(currentLevel) {
     }
       
 }
+
+
+
+// Function game repeat all sequence 
+function gameRepeatAllSequence () {
+    gameRandomColor.forEach((color, index) => {
+        // set time out for delay, wait player click --> delay --> repeat
+        setTimeout(() => {
+            playSound(color);
+            flashColor(color);
+        }, 500*index); // speed per index of color when start repeat all sequnce
+    })
+}
+
 
 // Function game over
 function gameOver() {
