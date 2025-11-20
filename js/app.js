@@ -59,6 +59,7 @@ function startRandom() {
         // 	update title and and current level
         changeTitletoScore.textContent = `level ${level}`;
         // clear player pattern for next round
+        // If not clear player can't click on color sequence
         playerPatternColor = [];
 
         // play sound and flash on color chosen
@@ -150,6 +151,7 @@ function checkPlayerAnswer(currentLevel) {
 function gameRepeatAllSequence () {
     gameRandomColor.forEach((color, index) => {
         // set time out for delay, wait player click --> delay --> repeat
+        // If not have delay function game random will show game pattern all same time
         setTimeout(() => {
             playSound(color);
             flashColor(color);

@@ -8,7 +8,11 @@ Each color button is associated with a distinct sound. The game tests the player
 
 For this game I add sound, a little bit animation and try to learn about new function such as setTimeout.
 
+Technologies used: JavaScript, HTML, CSS
+
 Run Instructions : You can either download the files and open index.html with a browser, or you can access this link to play the game online: https://katoonlion.github.io/The-Simon-Game/
+
+Next steps: Understanding more about Advance Javascript & CSS, Backend (server/database)
 
 </small>
 
